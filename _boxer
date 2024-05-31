@@ -1,0 +1,28 @@
+#compdef boxer
+
+#     local commands=
+function _boxer {
+    local line
+
+    _arguments -C \
+        "1:command:(initbox run showtargets showhashes showcreds shownotes showlog addtarget addhash addcreds addnote screenshot addloot loadbox log)" \
+        "*::arg:->args"
+
+    case $line[1] in
+	loadbox)
+	   _boxer_loadbox
+	;;
+        run)
+            _command
+        ;;
+	*)
+	;;
+    esac
+}
+
+_boxer_loadbox() {
+    local -a boxes=(${(f)$(find ~/machines/ -name .box | sed -e 's/^.*machines\/\(.*\)\/\.box/\1/g')})
+    _arguments "*:box:( ${boxes} )"
+
+}
+
