@@ -11,14 +11,14 @@ The following commands are currently implemented:
 
 ## Commands for adding stuff
 
- - boxer initbox <boxsubpath>  ------  i.e. boxer initbox htb/insane/magic_gardens
- - boxer loadbox <boxsubpath>
- - boxer run <command> <with> <arguments>  ---- Will run command and log outputs (Some stuff still buggy, i.e. Evil-WinRM)
- - boxer addcreds <user:pass>
- - boxer addhash <hash>
+ - boxer initbox \<boxsubpath\>  ------  i.e. boxer initbox htb/insane/magic_gardens
+ - boxer loadbox \<boxsubpath\>
+ - boxer run \<command\> \<with\> \<arguments\>  ---- Will run command and log outputs (Some stuff still buggy, i.e. Evil-WinRM)
+ - boxer addcreds \<user:pass\>
+ - boxer addhash \<hash\>
  - boxer addnote [Some note text] --- Note text optional - will run vim if not provided
- - boxer addtarget <target-ip> [hostname] ----- 
-            Adds an export for TARGET=<target-ip>
+ - boxer addtarget \<target-ip\> [hostname] ----- 
+            Adds an export for TARGET=\<target-ip\>
             Increasing numbers for targets: TARGET, TARGET1, TARGET2, TARGET3, ....
             If hostname is provided, also adds target to /etc/hosts file
  - boxer addloot [path/to/loot][/file] --- 
