@@ -15,6 +15,9 @@ function _boxer {
         run)
             _command
         ;;
+	initbox)
+	    _path_files -/ -W ~/machines
+	;;
 	*)
 	;;
     esac
@@ -25,4 +28,3 @@ _boxer_loadbox() {
     _arguments "*:box:( ${boxes} )"
 
 }
-
